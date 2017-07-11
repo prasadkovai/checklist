@@ -10,7 +10,7 @@ namespace ProcessStreet {
         const string TemplateId = "";
 
         public static void Main(string[] args) {
-            
+
             var client = new RestClient("https://api.process.st/1/checklists");
             client.Authenticator = new HttpBasicAuthenticator(ApiKey, "");
 
@@ -19,7 +19,7 @@ namespace ProcessStreet {
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(new {
                 organizationId = OrganizationId,
-				templateId = TemplateId, 
+                templateId = TemplateId,
                 name = "Test Checklist"
 
             });
